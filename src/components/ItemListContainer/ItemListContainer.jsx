@@ -1,6 +1,9 @@
-const ItemListContainer = () => {
+const ItemListContainer = ({title,subtitle}) => {
+
+
     return(
-        <h1>Soy ItemListContainer</h1>
+        <h1>{title}</h1>
+        
     )
 }
 
