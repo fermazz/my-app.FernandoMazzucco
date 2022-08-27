@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./ItemCount.css"
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, onAdd}) => {
   // Declaro variable count y setCount que me va a permitir modificar el estado de count, no olvidar importa useState
   const [count, setCount] = useState(0);
 
@@ -42,7 +42,9 @@ const ItemCount = ({stock}) => {
             +
           </button>
         </div>
-        <button className="btn btn-outline-light">Confirmar</button>
+        <div>
+        <button className="btn btn-outline-light" onClick={() => onAdd(count)}>Confirmar</button>
+        </div>
       </div>
     </div>
   );
