@@ -1,5 +1,6 @@
 import React from "react"
 import ItemCount from "../ItemCount/ItemCount"
+import productos from "../ItemList/ItemList"
 
 const ItemListContainer = ({title,subtitle}) => {
 
@@ -8,7 +9,7 @@ const ItemListContainer = ({title,subtitle}) => {
         console.log(`Se han seleccionado ${count} productos`)
     }
 
-
+  
     return(
         <div>
         <h1>{title}</h1>
