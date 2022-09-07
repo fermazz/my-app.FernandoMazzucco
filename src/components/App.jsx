@@ -4,15 +4,18 @@ import NavBar from "./NavBar/NavBar";
 import ItemDetailContainer from "./ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./ItemListContainer/ItemListContainer";
 
-
 function App() {
   return (
-    
-    <div id="" className="App">
-      <NavBar />
-      <ItemListContainer title="My Ecommerce" />
-      <ItemDetailContainer/>
-    </div>
+    <BrowserRouter>
+      <div id="" className="App">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/categoria/:categoria" element={<ItemListContainer />} />
+          <Route path="/detalles/:id" element={<ItemDetailContainer />} />          
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
