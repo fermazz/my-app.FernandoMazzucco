@@ -4,7 +4,7 @@ import "./ItemCount.css";
 
 const ItemCount = ({ stock, onAdd }) => {
   // Declaro variable count y setCount que me va a permitir modificar el estado de count, no olvidar importa useState
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   // Declaro las funciones para cambiar el estado de count y luego las coloco en los botones con OnClick
   function add() {
@@ -39,14 +39,17 @@ const ItemCount = ({ stock, onAdd }) => {
           <button className="btn btn-outline-primary" onClick={add}>
             +
           </button>
+          {/* <div>
+                        <button disabled={stock <=0} className="btn btn-success " type="button" onAdd={() =>  onAdd(count)}>Agregar al Carrito</button>
+                    </div> */}
         </div>
         <div>
-          <button
+          {/* <button
             className="btn btn-outline-light"
             onClick={() => onAdd(count)}
           >
             Confirmar
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@ const ItemDetailContainer = () => {
     const {id} = useParams ()
 
     const [item, setItem] = useState();
+    // const [cantidad, setCantidad] = useState(1);
 
     const getProduct = () => new Promise((resolve, reject) => {
 
@@ -19,6 +20,11 @@ const ItemDetailContainer = () => {
         .then(response => setItem(response))
      
     }, []);
+
+    // const agregarAlCarrito = (product) => {
+    //     const productoCarrito = {id: product.id, cantidad: }
+    
+    //   }
 
     return (
 
