@@ -4,11 +4,18 @@ import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
+
+const [goToCart, setGoToCart] = useState(false)
+
   const onAdd = (quantity) => {
+
+    setGoToCart(true)
+
+
     console.log(quantity);
   };
 
-const [cantidad, setCantidad] = useState(1);
+const [cantidad, setCantidad] = useState(0);
 
 const agregarAlCarrito = (item, cantidad) => {
   const productoCarrito = {id: item.id, cantidad: cantidad}
@@ -26,7 +33,37 @@ const agregarAlCarrito = (item, cantidad) => {
           <p>{item.descripcion}</p>
           <p className="price">${item.precio}</p>
           <p>Stock: {item.stock}</p>
-          <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+          {/* <ItemCount stock={item.stock} initial={1} onAdd={onAdd} /> */}
+
+          <div className="d-grid gap-2">
+                    {goToCart ? (
+                      <Link
+                        to="/cart"
+                        className="btn btn-lg btn-dark mt-2 "
+                        type="button"
+                      >
+                        Finalizar compra
+                      </Link>
+                      
+                    ) : (
+                      <ItemCount
+                        className="mt-5 p-5"
+                        stock={item.stock}
+                        onAdd={onAdd}
+                      />
+                    )}
+                    <Link
+                        to="/"
+                        className="btn btn-lg btn-dark mt-2 "
+                        type="button"
+                      >
+                       Seguir Comprando
+                      </Link>
+                  </div>   
+
+
+
+
           <div>
           
          {/* <Link to="/cart"> 
