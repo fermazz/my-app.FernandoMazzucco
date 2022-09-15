@@ -29,14 +29,14 @@ const agregarAlCarrito = (item, cantidad) => {
           <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
           <div>
           
-         <Link to="/cart"> 
+         {/* <Link to="/cart"> 
         <button className="btn btn-outline-light"
             // onClick={() => onAdd(count)}
             onClick={() => agregarAlCarrito(item, cantidad)}
           >
-            Confirmar
+            Comprar
           </button>
-          </Link>
+          </Link> */}
         </div>
         </div>
         

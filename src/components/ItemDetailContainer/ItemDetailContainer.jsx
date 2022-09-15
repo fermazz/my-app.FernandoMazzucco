@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { products } from "../../mock/products";
-import { useParams } from "react-router-dom";
+import { useParams, } from "react-router-dom";
+import { useCartContext } from '../../context/CartContext';
+
 
 const ItemDetailContainer = () => {
 

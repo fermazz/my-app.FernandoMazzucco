@@ -30,18 +30,25 @@ const ItemCount = ({ stock, onAdd }) => {
       <div className="card text-white bg-dark mb-3 card-styles">
         <p>Cantidad: {count}</p>
         <div>
-          <button className="btn btn-outline-success" onClick={substract}>
+          <button className="btn btn-outline-success" onClick={substract}
+          disabled={count !== 1 ? false : true}>
             -
           </button>
           <button className="btn btn-outline-secondary" onClick={reset}>
             Reset
           </button>
-          <button className="btn btn-outline-primary" onClick={add}>
+          <button className="btn btn-outline-primary" onClick={add}
+          disabled={count !== stock ? false : true}>
             +
           </button>
+          <div className="d-grid gap-2">
+        <button disabled={stock<=0} className="btn btn-lg btn-dark mt-2" type="button" onClick={()=>onAdd(count)} >
+          Agregar al carrito
+        </button>
+      </div>
           {/* <div>
-                        <button disabled={stock <=0} className="btn btn-success " type="button" onAdd={() =>  onAdd(count)}>Agregar al Carrito</button>
-                    </div> */}
+            <button disabled={stock <=0} className="btn btn-success " type="button" onAdd={() =>  onAdd(count)}>Agregar al Carrito</button>
+           </div> */}
         </div>
         <div>
           {/* <button
