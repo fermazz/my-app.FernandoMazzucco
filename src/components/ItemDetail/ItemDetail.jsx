@@ -2,17 +2,22 @@ import React, {useState} from "react";
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, setItem }) => {
 
 const [goToCart, setGoToCart] = useState(false)
 
+const {addItem} = useCartContext();
+
   const onAdd = (quantity) => {
 
-    setGoToCart(true)
+    setGoToCart(true);
+    addItem(item, quantity);
+    item.stock = item.stock - quantity; 
 
+    console.log(quantity)
 
-    console.log(quantity);
   };
 
 const [cantidad, setCantidad] = useState(0);
@@ -60,9 +65,6 @@ const agregarAlCarrito = (item, cantidad) => {
                        Seguir Comprando
                       </Link>
                   </div>   
-
-
-
 
           <div>
           

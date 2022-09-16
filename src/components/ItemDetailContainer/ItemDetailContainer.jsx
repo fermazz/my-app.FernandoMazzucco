@@ -32,7 +32,7 @@ const ItemDetailContainer = () => {
 
         <>
         {        
-        item ? <ItemDetail item={item}/> : <h1>Cargando...</h1>
+        item ? <ItemDetail item={item} setItem={setItem}/> : <h1>Cargando...</h1>
         }
         </>
     )
