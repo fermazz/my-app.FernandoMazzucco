@@ -28,6 +28,7 @@ const agregarAlCarrito = (item, cantidad) => {
 } 
 
   return (
+    <>
     <article className="card text-white bg-dark mb-3">
       <h1>{item.nombre}</h1>
       <div className="card-detail">
@@ -38,8 +39,7 @@ const agregarAlCarrito = (item, cantidad) => {
           <p>{item.descripcion}</p>
           <p className="price">${item.precio}</p>
           <p>Stock: {item.stock}</p>
-          {/* <ItemCount stock={item.stock} initial={1} onAdd={onAdd} /> */}
-
+          
           <div className="d-grid gap-2">
                     {goToCart ? (
                       <Link
@@ -67,20 +67,12 @@ const agregarAlCarrito = (item, cantidad) => {
                   </div>   
 
           <div>
-          
-         {/* <Link to="/cart"> 
-        <button className="btn btn-outline-light"
-            // onClick={() => onAdd(count)}
-            onClick={() => agregarAlCarrito(item, cantidad)}
-          >
-            Comprar
-          </button>
-          </Link> */}
-        </div>
+          </div>
         </div>
         
       </div>
     </article>
+    </>
   );
 };
 

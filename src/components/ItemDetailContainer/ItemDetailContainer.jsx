@@ -23,11 +23,6 @@ const ItemDetailContainer = () => {
      
     }, []);
 
-    // const agregarAlCarrito = (product) => {
-    //     const productoCarrito = {id: product.id, cantidad: }
-    
-    //   }
-
     return (
 
         <>

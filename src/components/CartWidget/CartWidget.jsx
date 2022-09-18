@@ -7,20 +7,15 @@ import { Link } from "react-router-dom";
 const CartWidget = () => {
   const { totalProducts, cart } = useCartContext();
 
-  return (
-    <div className="container-fluid">
-      <Link className="navbar-brand carrito" to="../cart">
-        <RiShoppingCartLine className="icon"> </RiShoppingCartLine>
-      </Link>
-      <li
-        className={`nav-item ${
-          cart.length === 0 ? "d-none" : "navbar-brand d-block"
-        }`}
-      >
-        <span>{totalProducts()}</span>
-      </li>
-    </div>
-  );
+  return cart.length > 0 ?
+  <div>
+    <Link to="/cart">
+    <RiShoppingCartLine className="icon"> </RiShoppingCartLine>
+    <span className="number-icon icon">{totalProducts()}</span>
+    </Link>
+  </div>
+  :
+  <div>""</div>
 };
 
 export default CartWidget;
