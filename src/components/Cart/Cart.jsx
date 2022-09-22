@@ -8,7 +8,7 @@ const Cart = () => {
 
   return cart.length > 0 ? (
     <div key={cart.id}>
-      <table className="table table-hover">
+      {/* <table className="table table-hover">
       <thead>
             <tr>
               <th scope="col">Cantidad</th>
@@ -18,15 +18,15 @@ const Cart = () => {
               <th scope="col">Acción</th>
             </tr>
           </thead>
-          </table>
+          </table> */}
       {cart.map((product) => (
-        <table className="table table-hover">
+        <table className="table table-hover" key={product.id}>
           
-          <tbody>
+          <tbody className="tbody">
             <tr className="table-dark">
-              <td scope="row">{product.quantity}</td>
-              <td>{product.nombre}</td>
-              <td>{product.precio}</td>
+              <td scope="row">Cantidad: {product.quantity}</td>
+              <td>Nombre: {product.nombre}</td>
+              <td>$ {product.precio}</td>
 
               <td className="img-container">                
                 <img className="img" src={product.img} />                
