@@ -42,7 +42,9 @@ const Cart = () => {
 
       <div>
         <h4>Precio total: {totalPrice()}</h4>
+        <Link to="/checkout">
         <button className="btn btn-lg btn-dark mt-2 ">Confirmar Compra</button>
+        </Link>
       </div>
     </div>
   ) : (
