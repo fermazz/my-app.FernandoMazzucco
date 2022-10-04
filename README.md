@@ -1,10 +1,8 @@
-# E-COMMERCE Proyecto Final :eyes:
+# E-commerce Proyecto Final :eyes:
 
 El proyecto se trata de un ecommerce que vende zapatillas de marca Nike.
 Fue desarrollado para el curso de React N° 34715 de CoderHouse.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
- 
 ## Información :ledger:
 
 - Estudiante: Fernando Mazzucco
@@ -13,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Comision: 34715
 - Profesor: Francisco Pugh
 
-## Fronrend :computer:
+## Frontend :computer:
 
 - React Js
 
