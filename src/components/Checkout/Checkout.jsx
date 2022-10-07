@@ -1,10 +1,10 @@
-import { async } from "@firebase/util";
 import { addDoc, collection } from "firebase/firestore";
 import React from "react";
 import { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
 import db from "../../services/firebase";
 import { useNavigate } from "react-router-dom";
+import "./Checkout.css";
 
 const Checkout = () => {
   const { cart, totalPrice, clear } = useCartContext();
@@ -58,54 +58,56 @@ const Checkout = () => {
   };
 
   return (
-    <>
+    <div className="position1">
       <h1>Finalizando Compra</h1>
       <hr />
 
       {!orderId ? (
         <div>
-          <h4>Completar Datos:</h4>
+          <fieldset className="fieldset">
+            <h4>Completar Datos:</h4>
 
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="Nombre"
-              placeholder="Nombre"
-              value={Nombre}
-              onChange={handleInputChange}
-            />
+            <form className="form-position" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="Nombre"
+                placeholder="Nombre"
+                value={Nombre}
+                onChange={handleInputChange}
+              />
 
-            <br />
-            <br />
+              <br />
+              <br />
 
-            <input
-              type="text"
-              name="Email"
-              placeholder="Email"
-              value={Email}
-              onChange={handleInputChange}
-            />
+              <input
+                type="text"
+                name="Email"
+                placeholder="Email"
+                value={Email}
+                onChange={handleInputChange}
+              />
 
-            <br />
-            <br />
+              <br />
+              <br />
 
-            <input
-              type="text"
-              name="Telefono"
-              placeholder="Telefono"
-              value={Telefono}
-              onChange={handleInputChange}
-            />
+              <input
+                type="text"
+                name="Telefono"
+                placeholder="Telefono"
+                value={Telefono}
+                onChange={handleInputChange}
+              />
 
-            <br />
-            <br />
+              <br />
+              <br />
 
-            <input
-              type="submit"
-              value="Finalizar Compra"
-              className="btn btn-lg btn-dark mt-2"
-            />
-          </form>
+              <input
+                type="submit"
+                value="Finalizar Compra"
+                className="btn btn-lg btn-dark mt-2"
+              />
+            </form>
+          </fieldset>
         </div>
       ) : (
         <h4>Su orden de compra es: {orderId}</h4>
@@ -113,11 +115,14 @@ const Checkout = () => {
 
       <br />
 
-      <button className="btn btn-lg btn-dark mt-2" onClick={handleClear}>
+      <button
+        className="btn btn-lg btn-dark mt-2 cancelar-position"
+        onClick={handleClear}
+      >
         {" "}
         Cancelar Compra{" "}
       </button>
-    </>
+    </div>
   );
 };
 

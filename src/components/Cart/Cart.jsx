@@ -7,24 +7,13 @@ const Cart = () => {
   const { cart, removeItem, totalPrice } = useCartContext();
 
   return cart.length > 0 ? (
-    <div key={cart.id}>
-      {/* <table className="table table-hover">
-      <thead>
-            <tr>
-              <th scope="col">Cantidad</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Precio unidad</th>
-              <th scope="col">Imagen</th>
-              <th scope="col">Acción</th>
-            </tr>
-          </thead>
-          </table> */}
+    <div className="container__cart" key={cart.id}>
       {cart.map((product) => (
-        <table className="table table-hover" key={product.id}>
+        <table className="table table-hover table-position" key={product.id}>
           <tbody className="tbody">
             <tr className="table-dark">
               <td scope="row">Cantidad: {product.quantity}</td>
-              <td>Nombre: {product.nombre}</td>
+              <td className="">{product.nombre}</td>
               <td>$ {product.precio}</td>
 
               <td className="img-container">
@@ -44,7 +33,7 @@ const Cart = () => {
         </table>
       ))}
 
-      <div>
+      <div className="price-position">
         <h4>Precio total: {totalPrice()}</h4>
         <Link to="/checkout">
           <button className="btn btn-lg btn-dark mt-2 ">
@@ -57,8 +46,11 @@ const Cart = () => {
     <div>
       <div className="cart-container">
         <h1>No hay elementos en el carrito</h1>
+        <hr />
+        <br />
+        <br />
         <Link to="/">
-          <button className="btn btn-lg btn-dark mt-2 ">
+          <button className="btn btn-lg btn-dark mt-2 cancelar-position">
             Seguir comprando
           </button>
         </Link>

@@ -6,8 +6,7 @@ const Item = ({ producto }) => {
   const { nombre, img, precio, id } = producto;
   return (
     <div
-      className="card text-white bg-dark mb-3 row"
-      // key={producto.id}
+      className="card text-white bg-dark mb-3 row"      
       style={{ maxWidth: "18rem", margin: "0.5rem" }}
     >
       <div className="card-header">{producto.nombre}</div>

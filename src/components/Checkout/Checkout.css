@@ -1,0 +1,32 @@
+.fieldset {
+
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 250px;
+    height: 350px;
+    margin: 0 auto;
+
+}
+
+.form-position {
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    align-items: center;
+}
+
+.cancelar-position {
+
+    display: flex;
+    margin: 0 auto;
+
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -7,7 +7,7 @@ const NavBar = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <Link to="/" className="navbar-brand" >
+          <Link to="/" className="navbar-brand">
             Zapas
           </Link>
           <button
@@ -43,7 +43,7 @@ const NavBar = () => {
               </Link>
             </ul>
             <Link to="/cart" className="nav-link active">
-            <CartWidget/>
+              <CartWidget />
             </Link>
           </div>
         </div>
