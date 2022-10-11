@@ -6,7 +6,7 @@ Fue desarrollado para el curso de React N° 34715 de CoderHouse.
 ## Información :ledger:
 
 - Estudiante: Fernando Mazzucco
-- Github: [https://github.com/fermazz]
+- Github: [https://github.com/fermazz](https://github.com/fermazz)
 - Curso: React / Coderhouse
 - Comision: 34715
 - Profesor: Francisco Pugh
@@ -22,8 +22,8 @@ Fue desarrollado para el curso de React N° 34715 de CoderHouse.
 ## Librerias :books:
 
 - Bootstrap
-- Google Fonts
-- Font-Awesome
+- Bootswatch
+- React-Bootstrap
 
 ## Control de Código fuente :cat:
 
