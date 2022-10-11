@@ -14,7 +14,7 @@ const Cart = () => {
             <tr className="table-dark">
               <td scope="row">Cantidad: {product.quantity}</td>
               <td className="">{product.nombre}</td>
-              <td>$ {product.precio}</td>
+              <td>$ {product.precio.toLocaleString()}</td>
 
               <td className="img-container">
                 <img className="img" src={product.img} />
@@ -34,7 +34,7 @@ const Cart = () => {
       ))}
 
       <div className="price-position">
-        <h4>Precio total: {totalPrice()}</h4>
+        <h4>Precio total: {totalPrice().toLocaleString()}</h4>
         <Link to="/checkout">
           <button className="btn btn-lg btn-dark mt-2 ">
             Confirmar Compra

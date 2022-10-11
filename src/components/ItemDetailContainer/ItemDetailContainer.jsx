@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 import { getDoc, doc } from "firebase/firestore";
 import db from "../../services/firebase";
 import "./ItemDetailContainer.css";
+import Loading from "../Loading/Loading";
+
+
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -30,7 +33,10 @@ const ItemDetailContainer = () => {
       {item ? (
         <ItemDetail item={item} setItem={setItem} />
       ) : (
-        <h1>Cargando...</h1>
+        <div>
+        <br />
+        <Loading/>
+        </div>
       )}
     </div>
   );

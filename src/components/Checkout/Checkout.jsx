@@ -59,11 +59,10 @@ const Checkout = () => {
 
   return (
     <div className="position1">
-      <h1>Finalizando Compra</h1>
-      <hr />
-
       {!orderId ? (
         <div>
+          <h1>Finalizando Compra</h1>
+          <hr />
           <fieldset className="fieldset">
             <h4>Completar Datos:</h4>
 
@@ -107,21 +106,27 @@ const Checkout = () => {
                 className="btn btn-lg btn-dark mt-2"
               />
             </form>
+
+            <br />
+
+            <button
+              className="btn btn-lg btn-dark mt-2 cancelar-position"
+              onClick={handleClear}
+            >
+              {" "}
+              Cancelar Compra{" "}
+            </button>
           </fieldset>
         </div>
       ) : (
-        <h4>Su orden de compra es: {orderId}</h4>
+        <div>
+          <h1>Compra Finalizada</h1>
+          <hr />
+          <br />
+          <h4>Su orden de compra es: {orderId} </h4>
+          <h4> Gracias por confiar en nosotros :)</h4>
+        </div>
       )}
-
-      <br />
-
-      <button
-        className="btn btn-lg btn-dark mt-2 cancelar-position"
-        onClick={handleClear}
-      >
-        {" "}
-        Cancelar Compra{" "}
-      </button>
     </div>
   );
 };

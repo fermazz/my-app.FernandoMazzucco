@@ -19,8 +19,8 @@
 
 .cancelar-position {
 
-    display: flex;
-    margin: 0 auto;
+    display: flex!important;
+    margin: 0 auto!important;
 
 }
 

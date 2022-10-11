@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { collection, doc, getDocs, query, where } from "firebase/firestore";
 import db from "../../services/firebase";
 import "./ItemListContainer.css";
+import Loading from "../Loading/Loading";
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -34,7 +35,10 @@ const ItemListContainer = () => {
       {productos.length ? (
         <ItemList productos={productos} className="container1" />
       ) : (
-        <h1>Cargando...</h1>
+        <div>
+        <br />
+        <Loading/>
+        </div>
       )}
     </div>
   );

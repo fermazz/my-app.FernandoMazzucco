@@ -17,6 +17,7 @@ const ItemDetail = ({ item, setItem }) => {
 
   return (
     <>
+    <br />
       <article className="card text-white bg-dark mb-3">
         <h1>{item.nombre}</h1>
         <div className="card-detail position">
@@ -27,7 +28,7 @@ const ItemDetail = ({ item, setItem }) => {
           <br />
           <div className="card-detail-right position2">
             <p>{item.descripcion}</p>
-            <p className="price">${item.precio}</p>
+            <p className="price">${item.precio.toLocaleString()}</p>
             <p>Stock: {item.stock}</p>
 
             <div className="d-grid gap-2">
@@ -50,8 +51,6 @@ const ItemDetail = ({ item, setItem }) => {
                 Seguir Comprando
               </Link>
             </div>
-
-            <div></div>
           </div>
         </div>
       </article>

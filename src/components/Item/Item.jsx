@@ -14,7 +14,7 @@ const Item = ({ producto }) => {
         <div>
           <img className="img" src={producto.img} alt={producto.nombre} />
         </div>
-        <p className="card-text">Precio: ${producto.precio} </p>
+        <p className="card-text">Precio: ${producto.precio.toLocaleString()} </p>
         <Link to={`/detalles/${id}`}>
           <button className="btn btn-outline-secondary">Ver detalles</button>
         </Link>
