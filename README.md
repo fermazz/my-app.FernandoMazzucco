@@ -3,6 +3,10 @@
 El proyecto se trata de un ecommerce que vende zapatillas de marca Nike.
 Fue desarrollado para el curso de React N° 34715 de CoderHouse.
 
+<p aling="center">
+<img width="460" height="300" src="public/video/gif.gif">
+</p>
+
 ## Información :ledger:
 
 - Estudiante: Fernando Mazzucco
